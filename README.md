@@ -1,15 +1,15 @@
 simply-edit.js
 ==============
 
-A really simple javascript toolbar with really simple options
-for basic formatting options for text areas. It's setup to work
-with bootstrap 3 and font awesome icons.
+A really simple toolbar with really simple options
+for formatting textareas. It's setup to work
+with Bootstrap 3 and Font Awesome.
 
 Check out the demo:<http://willywos.github.com/simply-edit.js/demo.html>
 
 ### Usage
 
-Include the script file in your html page. Then call the jquery
+Include the script file in your html page. Then call the simply-edit.js
 plugin by passing the id of the textarea.
 
 ```
@@ -35,7 +35,7 @@ plugin by passing the id of the textarea.
 
 ### Options
 
-The plugin has 3 options. When none of the options are specified
+Simply-Edit.js has 3 options. When none of the options are specified
 it defaults with these values:
 
 ```
@@ -47,19 +47,25 @@ buttons:[
   "italic",
   "underline",
   "strikethrough",
+  "seperator",
   "subscript",
   "superscript",
   "list-ol",
   "list-ul",
+  "seperator",
   "align-left",
   "align-center",
   "align-right",
+  "seperator",
   "undo"
 ]
 ```
 
 You can change any of the buttons or change the order of the buttons
 based on array passed into buttons.
+
+If you want to have a seperator between the buttons just put in a "seperator"
+in the buttons array.
 
 For example if I only wanted bold, italic, underline buttons to show in
 the toolbar.
@@ -71,8 +77,8 @@ $("#textarea-awesome").simplyedit({
 ```
 
 #### Dependencies
-This is what I wrote the plugin with. It should work nice with other
-versions of jQuery. By default it uses the css classes for font-awesome
+It should work nice with other versions of jQuery.
+By default it uses the css classes for Font Awesome
 and Bootstrap 3.
 
 * jQuery (1.11.1)

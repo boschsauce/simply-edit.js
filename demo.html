@@ -6,21 +6,83 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SimplyEdit.js - Easy Simple Text Editor</title>
+  <title>Simply-Edit.js - Easy Simple Text Editor</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/demo.css">
 </head>
 <body>
   <!--[if lt IE 7]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <div class="container-fluid">
-    <h2>Simply-Edit.js  <small>A really simple textarea text editor</small></h2>
-
+    <h2>Simply-Edit.js  <small>A really simple toolbar with really simple options for formatting textareas</small></h2>
     <textarea id="simply-edit" class="">This is awesome little textarea</textarea>
+    <pre>
+      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+   &lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot;&gt;
+      &lt;title&gt;Simply-Edit.js&lt;/title&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+      &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+      &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;css/font-awesome.min.css&quot;&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;textarea id=&quot;simply-edit&quot; class=&quot;&quot;&gt;This is awesome little textarea&lt;/textarea&gt;
+      &lt;script type=&quot;text/javascript&quot;&gt;
+         $(document).ready(function() {
+           $(&quot;#simply-edit&quot;).simplyedit();
+         });
+      &lt;/script&gt;
+      &lt;script src=&quot;js/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;js/simply-edit.js&quot;&gt;&lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+      </code>
+    </pre>
     <hr>
+
+
+    <h2>Basic Options</h2>
+    <small>This is only with bold, italic, underline and strikethrough</small><br><br>
+    <textarea id="simply-with-simple-buttons">This is only with bold, italic, underline and strikethrough</textarea>
+    <hr>
+      <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+   &lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot;&gt;
+      &lt;title&gt;Simply-Edit.js&lt;/title&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+      &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+      &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;css/font-awesome.min.css&quot;&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;textarea id=&quot;simply-edit&quot; class=&quot;&quot;&gt;This is awesome little textarea&lt;/textarea&gt;
+      &lt;script type=&quot;text/javascript&quot;&gt;
+         $(document).ready(function() {
+            $(&quot;#simply-with-simple-buttons&quot;).simplyedit({
+               buttons:[&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;]
+            });
+         });
+      &lt;/script&gt;
+      &lt;script src=&quot;js/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;js/simply-edit.js&quot;&gt;&lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
   </div>
 
   <script src="js/jquery-1.11.1.min.js"></script>
@@ -28,6 +90,10 @@
   <script src="js/simply-edit.js"></script>
   <script type="text/javascript">
     $("#simply-edit").simplyedit();
+
+    $("#simply-with-simple-buttons").simplyedit({
+      buttons:["bold", "italic", "underline"]
+    });
   </script>
 </body>
 </html>

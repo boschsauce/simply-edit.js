@@ -16,13 +16,16 @@
         "italic",
         "underline",
         "strikethrough",
+        "seperator",
         "subscript",
         "superscript",
         "list-ol",
         "list-ul",
+        "seperator",
         "align-left",
         "align-center",
         "align-right",
+        "seperator",
         "undo"
       ]
     };
@@ -79,6 +82,7 @@
           iframe.id = element_id;
         if (textarea.attr('name'))
           iframe.title = textarea.attr('name');
+
       }
 
       function tryEnableDesignMode(doc, callback) {
@@ -158,8 +162,11 @@
         var buttonsHtml = "<div class='btn-group'>";
         for(var i = 0; i < opts.buttons.length; i++) {
           var buttonId = opts.buttons[i];
-          if(opts.buttons[i] != "font-size") {
+          if(opts.buttons[i] != "font-size" && opts.buttons[i] != "seperator") {
             buttonsHtml += "<button class='btn btn-default' type='button' id='" + buttonId + "'><i class='fa fa-" + buttonId + "'/></button>\ "
+          }
+          if(opts.buttons[i] == "seperator"){
+            buttonsHtml += "</div><div class='btn-group'>"
           }
         }
         buttonsHtml += "</div>";
@@ -246,24 +253,25 @@
 
         var iframeDoc = $(iframe.contentWindow.document);
         var select = $('select', tb)[0];
+        if(select) {
+          iframeDoc.mouseup(function() {
+            setSelectedType(getSelectionElement(), select);
+            return true;
+          });
 
-        iframeDoc.mouseup(function() {
-          setSelectedType(getSelectionElement(), select);
-          return true;
-        });
-
-        iframeDoc.keyup(function() {
-          setSelectedType(getSelectionElement(), select);
-          var body = $('body', iframeDoc);
-          if (body.scrollTop() > 0) {
-            var iframe_height = parseInt(iframe.style['height'])
-            if (isNaN(iframe_height))
-              iframe_height = 0;
-            var h = Math.min(opts.height, iframe_height + body.scrollTop()) + 'px';
-            iframe.style['height'] = h;
-          }
-          return true;
-        });
+          iframeDoc.keyup(function() {
+            setSelectedType(getSelectionElement(), select);
+            var body = $('body', iframeDoc);
+            if (body.scrollTop() > 0) {
+              var iframe_height = parseInt(iframe.style['height'])
+              if (isNaN(iframe_height))
+                iframe_height = 0;
+              var h = Math.min(opts.height, iframe_height + body.scrollTop()) + 'px';
+              iframe.style['height'] = h;
+            }
+            return true;
+          });
+        }
 
         return tb;
       };
