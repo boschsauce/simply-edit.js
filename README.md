@@ -9,8 +9,14 @@ Check out the demo:<http://willywos.github.com/simply-edit.js/demo.html>
 
 ### Usage
 
-Include the script file in your html page. Then call the simply-edit.js
-plugin by passing the id of the textarea.
+You can also use Bower to install the package. Just run
+
+```
+$ bower install simply-edit.js
+```
+OR you can download the script and include the script file in your html page.
+Then call the simply-edit.js plugin by passing the id of the textarea.
+
 
 ```
 <html>
