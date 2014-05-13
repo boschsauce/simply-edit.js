@@ -18,7 +18,9 @@
     "toolbar",
     "for",
     "javascript",
-    "winners"
+    "winners",
+    "simply-edit.js",
+    "simply-edit"
   ],
   "license": "MIT",
   "ignore": [
@@ -30,6 +32,8 @@
     "img",
     "fonts",
     "css",
-    "js"
+    "js",
+    "README.md",
+    "bower.json"
   ]
 }
