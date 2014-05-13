@@ -24,7 +24,7 @@ plugin by passing the id of the textarea.
 
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/simply-edit.js"></script>
+    <script src="simply-edit.js"></script>
 
     <script type="text/javascript">
       $("#textarea-awesome").simplyedit();
