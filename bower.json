@@ -1,24 +1,14 @@
 {
   "name": "simply-edit.js",
   "main": "simply-edit.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/willywos/simply-edit.js",
   "authors": [
     "willywos (wwilimek@gmail.com)"
   ],
   "description": "A really simple toolbar with really simple options for formatting textareas. It's setup to work with Bootstrap 3 and Font Awesome.",
   "keywords": [
-    "simple",
-    "easy",
-    "no",
-    "money",
-    "down",
-    "textarea",
-    "editor",
-    "toolbar",
-    "for",
-    "javascript",
-    "winners",
+    "jquery textarea toolbar",
     "simply-edit.js",
     "simply-edit"
   ],
@@ -34,6 +24,7 @@
     "css",
     "js",
     "README.md",
-    "bower.json"
+    "bower.json",
+    "demo.html"
   ]
 }
