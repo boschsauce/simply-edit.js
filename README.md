@@ -9,7 +9,7 @@ Check out the demo:<http://willywos.github.com/simply-edit.js/demo.html>
 
 ### Usage
 
-You can also use Bower to install the package. Just run
+You can also use Bower to install the package. Just run:
 
 ```
 $ bower install simply-edit.js
@@ -41,7 +41,7 @@ Then call the simply-edit.js plugin by passing the id of the textarea.
 
 ### Options
 
-Simply-Edit.js has 3 options. When none of the options are specified
+Simply-Edit.js has three options. When none of the options are specified,
 it defaults with these values:
 
 ```
@@ -70,10 +70,10 @@ buttons:[
 You can change any of the buttons or change the order of the buttons
 based on array passed into buttons.
 
-If you want to have a seperator between the buttons just put in a "seperator"
+If you want to have a seperator between the buttons add a "seperator"
 in the buttons array.
 
-For example if I only wanted bold, italic, underline buttons to show in
+For example, if I only wanted bold, italic, underline buttons to show in
 the toolbar.
 
 ```
